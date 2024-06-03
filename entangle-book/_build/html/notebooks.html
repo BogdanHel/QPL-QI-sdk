@@ -61,8 +61,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
-    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,9 +177,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise test 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -424,14 +421,35 @@ document.write(`
 <span class="n">enable_account</span><span class="p">(</span><span class="s1">&#39;b70fbdd4cbcde00319c844ff1ce39f8e7d0b81f9&#39;</span><span class="p">)</span>
 
 <span class="n">QI_URL</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;API_URL&#39;</span><span class="p">,</span> <span class="s1">&#39;https://api.quantum-inspire.com/&#39;</span><span class="p">)</span>
-
-
-<span class="n">project_name</span> <span class="o">=</span> <span class="s1">&#39;Qiskit-entangle-test&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/bogdane/_WRK/QUANTUM COMPUTING/QPL-QI-sdk/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the &#39;ssl&#39; module is compiled with &#39;LibreSSL 2.8.3&#39;. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">project_name</span> <span class="o">=</span> <span class="s1">&#39;Qiskit-entangle-test&#39;</span>
 <span class="n">authentication</span> <span class="o">=</span> <span class="n">get_authentication</span><span class="p">()</span>
 <span class="n">QI</span><span class="o">.</span><span class="n">set_authentication</span><span class="p">(</span><span class="n">authentication</span><span class="p">,</span> <span class="n">QI_URL</span><span class="p">,</span> <span class="n">project_name</span><span class="o">=</span><span class="n">project_name</span><span class="p">)</span>
 <span class="n">qi_backend</span> <span class="o">=</span> <span class="n">QI</span><span class="o">.</span><span class="n">get_backend</span><span class="p">(</span><span class="s1">&#39;QX single-node simulator&#39;</span><span class="p">)</span>
-
-<span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/x_/47cl6mrx5mvc1m583_0h0x99n8hxkc/T/ipykernel_50103/859390832.py:4: DeprecationWarning: The method ``qiskit.providers.provider.ProviderV1.get_backend()`` is deprecated as of qiskit 1.1. It will be removed no earlier than 3 months after the release date. The abstract Provider and ProviderV1 classes are deprecated and will  be removed in 2.0. You can just remove it as the parent class and a `get_backend` method that returns the backends from `self.backend`.
+  qi_backend = QI.get_backend(&#39;QX single-node simulator&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">q</span> <span class="o">=</span> <span class="n">QuantumRegister</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">ClassicalRegister</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">circuit</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
 
@@ -454,13 +472,19 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/bogdane/_WRK/QUANTUM COMPUTING/QPL-QI-sdk/.venv/lib/python3.9/site-packages/qiskit/providers/backend_compat.py:126: RuntimeWarning: No gate definition for barrier can be found and is being excluded from the generated target. You can use `custom_name_mapping` to provide a definition for this operation.
+  warnings.warn(
+/Users/bogdane/_WRK/QUANTUM COMPUTING/QPL-QI-sdk/.venv/lib/python3.9/site-packages/qiskit/providers/backend_compat.py:126: RuntimeWarning: No gate definition for snapshot can be found and is being excluded from the generated target. You can use `custom_name_mapping` to provide a definition for this operation.
+  warnings.warn(
+</pre></div>
+</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>State	Counts
-00		132
-11		124
+00		123
+11		133
 
 State	Probabilities
-00		0.515625
-11		0.484375
+00		0.48046875
+11		0.51953125
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[None, None]
@@ -468,8 +492,6 @@ State	Probabilities
 </div>
 </div>
 </div>
-<p>There is a lot more that you can do with outputs (such as including interactive outputs)
-with your book. For more information about this, see <a class="reference external" href="https://jupyterbook.org">the Jupyter Book documentation</a></p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -503,22 +525,13 @@ with your book. For more information about this, see <a class="reference externa
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="markdown.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Markdown Files</p>
+        <p class="prev-next-title">Welcome to your Jupyter Book</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="markdown-notebooks.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Notebooks with MyST Markdown</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
